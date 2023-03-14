@@ -7,17 +7,18 @@ const Author: React.FCC<{ author: AuthorType }> = ({ author }) => {
 
   return (
     <div className="flex flex-row items-center space-x-3">
-      <a target="_blank" rel="noreferrer noopened" href={author.url}>
+      <a target="_blank" rel="noreferrer noopened" href={author.url} className='items-center flex gap-2'>
         {author.picture ? (
           <Image
             width={imageSize}
             height={imageSize}
             src={author.picture}
+            className='rounded-full'
             alt={alt}
           />
         ) : null}
 
-        <span>{author.name}</span>
+        <span >{author.name}</span>
       </a>
     </div>
   );
